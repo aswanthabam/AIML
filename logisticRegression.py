@@ -14,8 +14,8 @@ target = ['Outcome']
 features = list(set(list(pima.columns))-set(target))  
 X = pima[features].values # Features
 y = pima[target].values # Target variable
-pima[features] = pima[features]/pima[features].max()
-pima.describe()
+# pima[features] = pima[features]/pima[features].max()
+# pima.describe()
 
 
 from sklearn.model_selection import train_test_split
@@ -33,10 +33,10 @@ y_pred = logreg.predict(X_test)
 
 from sklearn import metrics
 cnf_matrix = metrics.confusion_matrix(y_test,y_pred)
-cnf_matrix
+cnf_matrix # print confussion matrix
 
 from sklearn.metrics import classification_report
-target_names = ['without diabetes', 'with diabetes']
+target_names = ['without diabetes', 'with diabetes'] # Print the data, this a text label given for more understanding
 print(classification_report(y_test, y_pred,target_names=target_names))
 
 #Area Under the Curve
