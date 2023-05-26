@@ -31,3 +31,7 @@ pred_train_lr= lr.predict(X_train)
 print(np.sqrt(mean_squared_error(y_train,pred_train_lr)))
 pred_test_lr= lr.predict(X_test)
 print(np.sqrt(mean_squared_error(y_test,pred_test_lr)))
+
+X_new = np.array([ [603.5, 202677, 11.7, 4.4]])
+Y_new = lr.predict(X_new)
+print(Y_new)
